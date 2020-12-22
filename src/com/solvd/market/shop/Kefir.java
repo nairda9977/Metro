@@ -1,17 +1,28 @@
-package com.solvd.market.metro;
+package com.solvd.market.shop;
 
-public class MilkProducts extends Metro {
+public class Kefir extends MilkProducts {
     private String animalMilk;
+    private String temperature;
 
-    public MilkProducts() {
+    public Kefir() {
         super();
     }
 
-    public MilkProducts(String name) {
-        super(name);
+    public Kefir(String foodName) {
+        super(foodName);
+    }
+
+
+    public void setTemperature(String temperature) {
+        this.temperature = temperature;
+    }
+
+    public String getTemperature() {
+        return temperature;
     }
 
     public void setAnimalMilk(String animalMilk) {
+
         this.animalMilk = animalMilk;
     }
 
@@ -20,13 +31,13 @@ public class MilkProducts extends Metro {
     }
 
     public void printInfo() {
-        System.out.println("Name : " + getName());
+        System.out.println("Name : " + getFoodName());
+        System.out.println("Temperature " + temperature);
         System.out.println("Protein " + getProtein() + " gr");
         System.out.println("Carbohidrate " + getCarbohydrate() + " gr");
         System.out.println("Fat " + getFat() + " gr");
         System.out.println("Kkal " + getKkal());
         System.out.println("Weight " + getWeight() + " gr");
-        System.out.println("Animal Milk: " + getAnimalMilk());
-    }
 
+    }
 }
