@@ -1,6 +1,6 @@
 package com.solvd.market.shop;
 
-public class AlcoholicDrink extends Drink implements Location {
+public class AlcoholicDrink extends Drink {
     private int alcohol;
     private int protein;
     private int carbohydrate;

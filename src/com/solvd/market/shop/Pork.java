@@ -1,6 +1,6 @@
 package com.solvd.market.shop;
 
-public class Pork extends MeatProduct implements Location {
+public class Pork extends MeatProduct {
     private String temperature;
 
     public Pork() {

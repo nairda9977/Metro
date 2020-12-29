@@ -1,6 +1,8 @@
 package com.solvd.market.shop;
 
-public class MeatProduct extends Food implements Location {
+public class MeatProduct extends Food  {
+    public final int nds=20;
+    public int price;
     private int protein;
     private int carbohydrate;
     private int fat;
@@ -13,6 +15,15 @@ public class MeatProduct extends Food implements Location {
     public MeatProduct(String foodname) {
         super(foodname);
     }
+
+    public void setPrice(int price){
+        this.price=price;
+    }
+    public int getPrice(){
+        return price;
+    }
+
+
 
     @Override
     public String toEat() {

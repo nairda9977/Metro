@@ -1,6 +1,6 @@
 package com.solvd.market.shop;
 
-public class MilkProducts extends Food implements Location {
+public class MilkProducts extends Food  {
     private int protein;
     private int carbohydrate;
     private int fat;

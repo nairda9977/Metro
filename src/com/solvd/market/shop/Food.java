@@ -1,6 +1,7 @@
 package com.solvd.market.shop;
 
 public abstract class Food extends Shop {
+
     private String foodName;
     private int weight;
 
@@ -11,6 +12,7 @@ public abstract class Food extends Shop {
     public Food(String foodName) {
         this.foodName = foodName;
     }
+
 
     public void setFoodName(String foodName) {
         this.foodName = foodName;

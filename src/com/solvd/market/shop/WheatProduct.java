@@ -1,6 +1,6 @@
 package com.solvd.market.shop;
 
-public class WheatProduct extends Food {
+public final class WheatProduct extends Food {
     private String typeWheat;
     private int protein;
     private int carbohydrate;
