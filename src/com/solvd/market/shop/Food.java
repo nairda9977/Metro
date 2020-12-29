@@ -1,6 +1,6 @@
 package com.solvd.market.shop;
 
-public abstract class Food extends Shop {
+public abstract class Food {
 
     private String foodName;
     private int weight;
