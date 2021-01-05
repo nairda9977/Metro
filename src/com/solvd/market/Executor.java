@@ -1,38 +1,33 @@
 package com.solvd.market;
 
 import com.solvd.market.build.Warehouse;
-import com.solvd.market.shop.Food;
-import com.solvd.market.shop.Drink;
-import com.solvd.market.shop.MeatProduct;
-import com.solvd.market.shop.MilkProducts;
-import com.solvd.market.shop.NonAlcoholic;
-import com.solvd.market.shop.AlcoholicDrink;
-import com.solvd.market.shop.Fruits;
+import com.solvd.market.shop.*;
+import com.sun.org.apache.bcel.internal.generic.ALOAD;
+
+import javax.security.auth.login.AccountExpiredException;
+import java.lang.reflect.Array;
+import java.util.*;
 
 
 public class Executor {
     public static void main(String[] args) {
+    Food meat = new MeatProduct("meat1");
+    Food chiken = new MeatProduct("Chiken");
+    Food cow = new MeatProduct("Cow");
+    Drink water = new NonAlcoholic("Water");
+    Technik samsung = new Phones("samsung1");
 
-
-        System.out.println("=WAREHOUSE=");
-        Food meatproduct = new MeatProduct("ChikenMeat");
-        Food milkproducts = new MilkProducts("Cow Milk");
-
-        Drink nonAlcoholic = new NonAlcoholic("Apple juice");
-        Drink alcoholic = new AlcoholicDrink("Jack-Daniels");
-
-        Warehouse warehouse = new Warehouse();
-        warehouse.addFood(milkproducts);
-        warehouse.addDrink(alcoholic);
-        warehouse.printInfo();
-
-        System.out.println(meatproduct.toEat());
-        Food fruits = new Fruits();
-        System.out.println(fruits.toEat());
-
-
-
-
+    Warehouse warehouse = new Warehouse();
+    warehouse.addFood(meat);
+    warehouse.addFood(chiken);
+    warehouse.addDrink(water);
+    warehouse.addFood(cow);
+    warehouse.addTech(samsung);
+    warehouse.addTech(samsung);
+    warehouse.addTech(samsung);
+   warehouse.printFields();
+   warehouse.removeFood(meat);
+   warehouse.printFields();
     }
 
 

@@ -13,9 +13,12 @@ public class NonAlcoholic extends Drink {
         super(drinkName);
     }
 
-    public void location() {
-        System.out.println("Non alcoholic drink should be near Alcoholic");
+    public String toString(){
+        return "Non Alcoholic : "+ getDrinkName();
     }
+
+
+
 
     public void Kkal(int kkal) {
         this.kkal = kkal;

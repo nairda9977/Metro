@@ -14,6 +14,9 @@ public class AlcoholicDrink extends Drink {
         super(name);
     }
 
+    public String toString(){
+        return "Alcoholic Drink : " + getDrinkName();
+    }
     public void setAlcohol(int alcohol) {
         this.alcohol = alcohol;
     }
@@ -44,6 +47,10 @@ public class AlcoholicDrink extends Drink {
 
     public int getKkal() {
         return kkal;
+    }
+
+    public String himher(String himher){
+        return "this alcool is for " + himher;
     }
 
     public void printInfo() {

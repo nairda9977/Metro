@@ -10,6 +10,9 @@ public class Pork extends MeatProduct {
     public Pork(String name) {
         super(name);
     }
+    public String toString(){
+        return "Pork  : " + getFoodName();
+    }
 
     public void setTemperature(String temperature) {
         this.temperature = temperature;

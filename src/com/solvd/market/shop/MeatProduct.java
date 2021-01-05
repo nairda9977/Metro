@@ -16,6 +16,12 @@ public class MeatProduct extends Food  {
         super(foodname);
     }
 
+    public String toString(){
+        return "Meat Product  : "+ getFoodName();
+    }
+
+
+
     public void setPrice(int price){
         this.price=price;
     }

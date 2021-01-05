@@ -14,13 +14,10 @@ public abstract class Food {
     }
 
 
-    public void setFoodName(String foodName) {
-        this.foodName = foodName;
-    }
 
-    public String getFoodName() {
-        return foodName;
-    }
+    public String getFoodName(){
+        return this.foodName;
+}
 
     public void setWeight(int weight) {
         this.weight = weight;
