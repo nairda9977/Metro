@@ -15,6 +15,12 @@ public class MilkProducts extends Food  {
 
         super(foodName);
     }
+
+    @Override
+    public void printException() {
+
+    }
+
     public String toEat(){
         return "toEat";
     }

@@ -1,7 +1,9 @@
 package com.solvd.market.shop;
 
-public abstract class Food {
+import javax.annotation.processing.SupportedSourceVersion;
+import java.util.Scanner;
 
+public abstract class Food {
     private String foodName;
     private int weight;
 
@@ -30,7 +32,11 @@ public abstract class Food {
     public void printInfo() {
 
     }
-    public abstract String toEat();
+    public abstract void printException() throws Exception;
+
+
+
+
 
 
 }

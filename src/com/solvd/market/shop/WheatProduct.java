@@ -69,4 +69,10 @@ public final class WheatProduct extends Food {
         System.out.println("Weight " + getWeight() + " gr");
 
     }
+
+    @Override
+    public void printException() throws Exception {
+        System.err.println("This is Exception ");
+        throw new Exception();
+    }
 }
