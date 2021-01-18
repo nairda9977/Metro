@@ -1,26 +1,41 @@
 package com.solvd.market;
 
-import com.solvd.exception.ShopException;
+import com.solvd.market.exception.ShopException;
 import com.solvd.market.build.Warehouse;
 import com.solvd.market.shop.*;
+import com.solvd.market.utils.ReadingFromFile;
+import com.solvd.market.utils.WRFromProperty;
+import com.solvd.market.utils.WritingToFile;
+
+import javax.annotation.processing.SupportedSourceVersion;
+import java.util.Enumeration;
+import java.util.Scanner;
 
 
 public class Executor {
     public static void main(String[] args) throws Exception, ShopException {
-    Food meat = new MeatProduct("Pork", "12.12.2021");
-    Food chiken = new MeatProduct("Chiken", "20.12.2021");
-    Food cow = new MeatProduct("Cow", "20.12.2021");
-    Drink water = new NonAlcoholic("Water", "12.02.2025");
-    MeatProduct meatList = new MeatProduct("pork", "20.12.2021");
-
-    Warehouse warehouse = new Warehouse();
-    warehouse.addMeat();
-    WheatProduct wheatProduct = new WheatProduct();
-    wheatProduct.printException();
-    throw new ShopException();
-
+  /*      ReadingFromFile readingFromFile = new ReadingFromFile();
+        readingFromFile.readingFromFile("C:/Users/user/Desktop/test.txt");*/
+/*        WRFromProperty wrFromProperty = new WRFromProperty();
+        wrFromProperty.writeToProperty("Second.properties", "Password","visaR999");
+        String getValue = wrFromProperty.getProperty("Second.properties", "Password");
+        System.out.println(getValue);*/
+        /*MeatProduct meatProduct = new MeatProduct();
+        meatProduct.callMeatList();*/
+    /*    WritingToFile writingToFile1 = new WritingToFile();
+        writingToFile.WritingToFile("C:/Users/user/Desktop/test.txt", "asdfjfd", "12.12.2100");*/
+     /*   Warehouse warehouse = new Warehouse();
+        warehouse.addMeat();*/
+        Warehouse warehouse = new Warehouse();
+        /*warehouse.addMeat();*/
+        warehouse.addMilk();
 
     }
 
 
+
+
 }
+
+
+

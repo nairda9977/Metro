@@ -8,8 +8,8 @@ public class Kefir extends MilkProducts {
         super();
     }
 
-    public Kefir(String foodName) {
-        super(foodName);
+    public Kefir(String foodName, String expYear) {
+        super(foodName, expYear);
     }
 
 

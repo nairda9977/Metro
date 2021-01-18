@@ -10,8 +10,8 @@ public class Fruits extends Food {
         super();
     }
 
-    public Fruits(String name) {
-        super(name);
+    public Fruits(String foodName) {
+        super();
     }
 
     public String toEat(){

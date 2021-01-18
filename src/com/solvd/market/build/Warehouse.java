@@ -16,7 +16,13 @@ public class Warehouse {
 
     public void addMeat(){
         MeatProduct meatProduct = new MeatProduct();
-        meatProduct.addMeatList();
+        meatProduct.callMeatList();
+
+    }
+    public void addMilk(){
+        MilkProducts milkProducts = new MilkProducts();
+        milkProducts.addMilkProduct();
+
     }
 
     public void addNonAlcoDrink(){
