@@ -22,7 +22,7 @@ public class MilkProducts extends Food {
 
     }
 
-    @Override
+
     public void printException() {
 
     }
@@ -86,9 +86,6 @@ public class MilkProducts extends Food {
     }
 
 
-    public void location() {
-        System.out.println("milk should be near Meet Product");
-    }
 
 
 }

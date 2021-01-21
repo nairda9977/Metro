@@ -1,20 +1,13 @@
 package com.solvd.market.shop;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class Food {
     private String foodName;
     private String expDate;
     private int weight;
     private String quantity;
 
-
-    List<Food> freezer;
-
     public Food() {
-        foodName = "default";
-        freezer = new ArrayList<Food>();
+
     }
 
     public Food(String foodName, String expDate){
@@ -26,11 +19,6 @@ public abstract class Food {
         this.foodName = foodName;
         this.expDate = expDate;
         this.quantity=quantity;
-
-    }
-
-    public Food(String name) {
-        this.name = name;
 
     }
 
@@ -75,14 +63,7 @@ public abstract class Food {
 
         return null;
     }
-    String name;
 
-
-
-
-
-
-    public abstract void printException() throws Exception;
 
 
 }

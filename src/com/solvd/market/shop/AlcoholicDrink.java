@@ -1,14 +1,8 @@
 package com.solvd.market.shop;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+
 
 public class AlcoholicDrink extends Drink  {
-    Scanner name = new Scanner(System.in);
-    private String name1;
-    Scanner expDate = new Scanner(System.in);
     private String expDate1;
     private int alcohol;
     private int protein;
@@ -21,22 +15,15 @@ public class AlcoholicDrink extends Drink  {
 
     }
 
-    public void addAlcoholList() throws IOException {
 
-    }
-
-
-    public AlcoholicDrink(String name1, String expDate1) {
-        this.name1 = name1;
+    public AlcoholicDrink(String drinkName, String expDate1) {
+        super();
         this.expDate1 = expDate1;
     }
 
     public String toString() {
-        return "Alcoholic Drink : " + name1 + "    Expire Date is : " + expDate1;
+        return "Alcoholic Drink : " + getDrinkName() + "    Expire Date is : " + expDate1;
     }
-
-
-
 
     public int getAlcohol() {
         return alcohol;
@@ -66,9 +53,6 @@ public class AlcoholicDrink extends Drink  {
         return kkal;
     }
 
-    public String himher(String himher) {
-        return "this alcool is for " + himher;
-    }
 
     public void printInfo() {
         System.out.println("Name is " + getDrinkName());
@@ -77,7 +61,4 @@ public class AlcoholicDrink extends Drink  {
 
     }
 
-    public void location() {
-        System.out.println("Meet should be near Non-Alcoholic");
-    }
 }

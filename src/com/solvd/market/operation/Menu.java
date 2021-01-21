@@ -1,6 +1,5 @@
 package com.solvd.market.operation;
 
-
 import java.util.Scanner;
 
 public class Menu {

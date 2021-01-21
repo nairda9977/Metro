@@ -3,8 +3,6 @@ package com.solvd.market.shop;
 
 public class MeatProduct extends Food {
     private String typeOfMeatProduct;
-    private String foodName;
-    private String expDate;
     private String protein;
     private int kkal;
     public final int NDS = 20;
@@ -61,11 +59,7 @@ public class MeatProduct extends Food {
         return kkal;
     }
 
-    @Override
-    public void printException() throws Exception {
-        System.out.println("Here is Exception ");
-        throw new Exception();
-    }
+
 
 
 }
