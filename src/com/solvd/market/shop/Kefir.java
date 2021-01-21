@@ -30,7 +30,7 @@ public class Kefir extends MilkProducts {
         return animalMilk;
     }
 
-    public void printInfo() {
+    public String printInfo() {
         System.out.println("Name : " + getFoodName());
         System.out.println("Temperature " + temperature);
         System.out.println("Protein " + getProtein() + " gr");
@@ -39,5 +39,6 @@ public class Kefir extends MilkProducts {
         System.out.println("Kkal " + getKkal());
         System.out.println("Weight " + getWeight() + " gr");
 
+        return null;
     }
 }

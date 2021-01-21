@@ -1,78 +1,54 @@
 package com.solvd.market.shop;
 
-import com.solvd.market.utils.WritingToFile;
-
-
-import java.io.IOException;
-import java.util.*;
 
 public class MeatProduct extends Food {
-
+    private String typeOfMeatProduct;
     private String foodName;
     private String expDate;
-    private int protein;
+    private String protein;
     private int kkal;
     public final int NDS = 20;
 
-
-
     public MeatProduct() {
         super();
-
     }
 
-    public MeatProduct(String foodName, String expDate) {
-        super(foodName, expDate);
-        this.foodName = foodName;
-        this.expDate = expDate;
+    public MeatProduct(String typeOfMeatProduct, String foodName, String expDate, String quantity) {
+        super(foodName, expDate, quantity);
+        this.typeOfMeatProduct=typeOfMeatProduct;
     }
 
-    public MeatProduct(String name) {
-        super(name);
+    public MeatProduct(String foodName,  String protein) {
+        super(foodName, protein);
+        this.protein=protein;
     }
-    public String callMeatList() {
-            String name = consoleFoodName();
-            String expDate = consoleExpDate();
-            MeatProduct meatProduct = new MeatProduct(name, expDate);
-        WritingToFile writingToFile = new WritingToFile();
-        writingToFile.WritingToFile("C:/Users/user/Desktop/test.txt", name, expDate);
-            addFood(meatProduct);
-            System.out.println("ok)");
-            System.out.println("Do you want do add meat again ?(y/n)");
-            Scanner addMeatAgain = new Scanner(System.in);
-            String addMeatAgain1 = addMeatAgain.nextLine();
-            if (addMeatAgain1.equals("y") | addMeatAgain1.equals("Y")) {
-                callMeatList();
-            }
-            for (int i = 0; i <= 1; i++) {
-                int menuGetNumber = menu();
-                switch (menuGetNumber) {
-                    case 1:
-                        removeFood(meatProduct);
-                        System.out.println("Meat is removed ");
-                        break;
-                    case 2:
-                        System.out.println("Meat list");
-                        PrintFoodList();
-                    break;
+    public String toString() {
+        return printInfo();
+    }
 
-                    case 3:
-                        System.exit(0);
-                        break;
-                    case 4:
-                        callMeatList();
-                        break;
-                }
-            }
-            return name + expDate;
+    public String printInfo() {
+        System.out.println("===Meat Products===");
+        System.out.println("Type of milk product = " + typeOfMeatProduct);
+        System.out.println("Name     : " + getFoodName());
+        System.out.println("Exp Date : " + getExpDate());
+        System.out.println("Quantity : " + getQuantity());
+        return " ";
     }
 
 
-    public void setProtein(int protein) {
+    public void setTypeOfMeatProduct(String typeOfMeatProduct) {
+        this.typeOfMeatProduct = typeOfMeatProduct;
+    }
+
+    public String getTypeOfMeatProduct() {
+        return typeOfMeatProduct;
+    }
+
+    public void setProtein(String protein) {
         this.protein = protein;
     }
 
-    public int getProtein() {
+    public String getProtein() {
         return protein;
     }
 

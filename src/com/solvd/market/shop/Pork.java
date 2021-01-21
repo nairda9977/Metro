@@ -26,12 +26,13 @@ public class Pork extends MeatProduct {
         System.out.println("Should be near cow meat");
     }
 
-    public void printInfo() {
+    public String printInfo() {
         System.out.println("Name : " + getFoodName());
         System.out.println("Temperature " + temperature);
         System.out.println("Protein " + getProtein() + " gr");
 
         System.out.println("Kkal " + getKkal());
         System.out.println("Weight " + getWeight() + " gr");
+        return null;
     }
 }

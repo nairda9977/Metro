@@ -1,16 +1,11 @@
 package com.solvd.market.shop;
 
-import com.solvd.market.utils.WritingToFile;
-
-
-import java.util.Scanner;
-
-public class MilkProducts extends Food  {
+public class MilkProducts extends Food {
+    private String typeOfMilkProduct;
     private int protein;
     private int carbohydrate;
-    private int fat;
+    private String fat;
     private int kkal;
-    private String expDate;
 
     public MilkProducts() {
 
@@ -21,47 +16,34 @@ public class MilkProducts extends Food  {
         super(foodName, expDate);
     }
 
+    public MilkProducts(String typeOfMilkProduct, String foodName, String expDate, String quantity) {
+        super(foodName, expDate, quantity);
+        this.typeOfMilkProduct = typeOfMilkProduct;
+
+    }
+
     @Override
     public void printException() {
 
     }
 
-    public String toEat(){
+    public String toString() {
+        return printInfo();
+    }
+
+    public String printInfo() {
+        System.out.println("===Milk Products===");
+        System.out.println("Type of milk product = " + typeOfMilkProduct);
+        System.out.println("Name     : " + getFoodName());
+        System.out.println("Exp Date : " + getExpDate());
+        System.out.println("Quantity : " + getQuantity());
+        return " ";
+    }
+
+    public String toEat() {
         return "toEat";
     }
 
-    public void addMilkProduct(){
-        String name=consoleFoodName();
-        String expDate=consoleExpDate();
-        MilkProducts milkProducts = new MilkProducts(name, expDate);
-        WritingToFile writingToFile = new WritingToFile();
-        writingToFile.WritingToFile("C:/Users/user/Desktop/test.txt", name, expDate);
-        addFood(milkProducts);
-        System.out.println("Do you want to add again ?(y/n)");
-        Scanner addAgain = new Scanner(System.in);
-        String addAgain1=addAgain.nextLine();
-        if(addAgain1.equalsIgnoreCase("y")){
-            addMilkProduct();
-        }
-        int menuGetNumber = menu();
-        switch (menuGetNumber) {
-            case 1:
-                removeMilk(milkProducts);
-                System.out.println("Meat is removed ");
-                break;
-            case 2:
-                System.out.println("Meat list");
-                PrintFoodList();
-                break;
-
-            case 3:
-                System.exit(0);
-                break;
-            case 4:
-                addMilkProduct();
-                break;
-        }
-    }
 
     public void setProtein(int protein) {
         this.protein = protein;
@@ -69,6 +51,14 @@ public class MilkProducts extends Food  {
 
     public int getProtein() {
         return protein;
+    }
+
+    public void setTypeOfMilkProduct(String typeOfMilkProduct) {
+        this.typeOfMilkProduct = typeOfMilkProduct;
+    }
+
+    public String getTypeOfMilkProduct() {
+        return typeOfMilkProduct;
     }
 
     public void setCarbohydrate(int carbohydrate) {
@@ -79,11 +69,11 @@ public class MilkProducts extends Food  {
         return carbohydrate;
     }
 
-    public void setFat(int fat) {
+    public void setFat(String fat) {
         this.fat = fat;
     }
 
-    public int getFat() {
+    public String getFat() {
         return fat;
     }
 

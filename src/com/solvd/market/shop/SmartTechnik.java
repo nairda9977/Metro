@@ -1,29 +1,39 @@
 package com.solvd.market.shop;
 
 public class SmartTechnik implements Technik  {
-     public String name;
-    public int issueDate;
+    private String name;
+    private String issueYear;
+    private String model;
 
     public SmartTechnik(){
 
     }
-    public SmartTechnik(String name, int issueDate){
+    public SmartTechnik(String name, String issueYear, String model){
         this.name=name;
-        this.issueDate=issueDate;
+        this.issueYear=issueYear;
+        this.model=model;
     }
 
-    public String toString(){
-        return "Smart tech : " + name + " " +issueDate;
+    public void setName(String name) {
+        this.name = name;
     }
-
-    public String getName(String name){
+    public String getName(){
         return name;
     }
-    public int getDate(int issueDate){
-        return issueDate;
+
+    public void setModel(String model) {
+        this.model = model;
     }
 
+    public String getModel() {
+        return model;
+    }
 
+    public void setIssueYear(String issueYear) {
+        this.issueYear = issueYear;
+    }
 
-
+    public String getIssueYear() {
+        return issueYear;
+    }
 }

@@ -51,12 +51,13 @@ public class Fruits extends Food {
     }
 
 
-    public void printInfo() {
+    public String printInfo() {
         System.out.println("Protein " + getProtein() + " gr");
         System.out.println("Carbohidrate " + getCarbohydrate() + " gr");
         System.out.println("Fat " + getFat() + " gr");
         System.out.println("Kkal " + getKkal());
         System.out.println("Weight " + getWeight() + " gr");
+        return null;
     }
 
     @Override

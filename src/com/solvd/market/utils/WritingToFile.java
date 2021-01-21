@@ -1,25 +1,22 @@
 package com.solvd.market.utils;
 
-import com.solvd.market.shop.MeatProduct;
 
-import javax.naming.Context;
+import com.solvd.market.shop.MilkProducts;
+
+
 import java.io.*;
 
 public class WritingToFile {
 
-    public void WritingToFile(String path, String name, String date){
+    public void WrToFile(String path, MilkProducts milkProducts){
         File file = new File(path);
 
-
-            /*PrintWriter pw = new PrintWriter(file.getAbsoluteFile(), true);
-            pw.print(name);*/
             try (BufferedWriter bufer = new BufferedWriter(new FileWriter(file, true))) {
-                bufer.write(name);
-                bufer.newLine();
-                bufer.write(date);
-                bufer.newLine();
-                bufer.newLine();
+                bufer.write(String.valueOf(milkProducts));
 
+
+            }catch (FileNotFoundException e){
+                e.printStackTrace();
             }catch (IOException e){
                 e.printStackTrace();
             }

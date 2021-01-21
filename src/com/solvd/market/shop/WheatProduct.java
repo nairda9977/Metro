@@ -59,7 +59,7 @@ public final class WheatProduct extends Food {
         return kkal;
     }
 
-    public void printInfo() {
+    public String printInfo() {
         System.out.println("Name : " + getFoodName());
         System.out.println("Type of wheat :" + typeWheat);
         System.out.println("Protein " + getProtein() + " gr");
@@ -68,6 +68,7 @@ public final class WheatProduct extends Food {
         System.out.println("Kkal " + getKkal());
         System.out.println("Weight " + getWeight() + " gr");
 
+        return null;
     }
 
     @Override
